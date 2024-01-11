@@ -1,3 +1,11 @@
+@media screen and (max-width: 600px) {
+   .window {
+      width: 100%;
+      /* Weitere Anpassungen für kleine Bildschirme */
+   }
+   /* Weitere angepasste Stile für kleinere Bildschirme */
+}
+
 .center-container {
    display: flex;
    justify-content: center;
