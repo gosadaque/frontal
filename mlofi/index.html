@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Service Selector</title>
+      <meta charset="UTF-8" />
+      <link rel="stylesheet" href="../XP.css" />
+      <link rel="stylesheet" href="../styles.css" />
+    <style>
+        .container {
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+   <div class="center-container">
+      <div class="window" style="width: 250px">
+         <div class="title-bar">
+            <div class="title-bar-text">Müsli's Stuff - MüsliLoFi</div>
+  <div class="title-bar-controls">
+    <button aria-label="Help"></button>
+    <button aria-label="Close"></button>
+  </div>
+         </div>
+		 
+        <div class="window-body">
+			<fieldset>
+				<legend>Musikdienste:</legend>
+				<input type="radio" id="spotify" name="music_service" value="https://open.spotify.com/intl-de/artist/4Iqp3jAwyyP9z83ECBpZlU">
+				<label for="spotify">Spotify</label><br>
+				<input type="radio" id="deezer" name="music_service" value="https://www.deezer.com/de/artist/193811817">
+				<label for="deezer">Deezer</label><br>
+				<input type="radio" id="applemusic" name="music_service" value="https://music.apple.com/us/artist/m%C3%BCslilofi/1660230999">
+				<label for="applemusic">AppleMusic (iTunes)</label><br>
+				<input type="radio" id="tidal" name="music_service" value="https://listen.tidal.com/artist/36218000">
+				<label for="tidal">Tidal</label>
+			</fieldset>
+			<button id="goButton">Zur Musik</button>
+		</div>
+      </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('input[name="music_service"]');
+            const goButton = document.getElementById('goButton');
+
+            function updateButtonLink() {
+                const selectedService = document.querySelector('input[name="music_service"]:checked');
+                if (selectedService) {
+                    goButton.onclick = function() {
+                        window.open(selectedService.value, '_blank');
+                    };
+                }
+            }
+
+            buttons.forEach(button => {
+                button.addEventListener('change', updateButtonLink);
+            });
+        });
+    </script>
+</body>
+</html>
