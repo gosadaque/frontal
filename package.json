@@ -1,4 +1,9 @@
 {
+	"scripts": {
+	  "start": "node server.js",
+	  "build": "echo 'kein Build-Schritt erforderlich für dieses Projekt' || exit 0",
+	  "test": "echo \"Error: no test specified\" && exit 1"
+	}
   "name": "frontal",
   "version": "1.0.0",
   "description": "",
