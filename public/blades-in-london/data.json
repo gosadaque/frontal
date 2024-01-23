@@ -1,0 +1,39 @@
+{
+    "locations": [
+        {
+            "name": "St Spehens Hall",
+            "lat": 51.49944298501029, 
+			"lng": -0.12532353401184085,
+            "description": "Beschreibung",
+            "images": ["./map-images/ststephens.png"]
+        },
+        {
+            "name": "Ehemaliger Cobweb Laden",
+            "lat": 51.5372234308983, 
+			"lng": -0.13584852218627932,
+            "description": "Abgebrannt",
+            "images": ["./map-images/cobwebladen1.png","./map-images/cobwebladen2.png","./map-images/cobwebladen3.png"]
+        },
+        {
+            "name": "Tee Laden",
+            "lat": 51.53766053657289, 
+			"lng": -0.1360791921615601,
+            "description": "Beschreibung",
+            "images": ["./map-images/tealaden.png"]
+        },
+        {
+            "name": "Museum Vorplatz",
+            "lat": 51.518453958211325, 
+			"lng": -0.1266432626899805,
+            "description": "Beschreibung",
+            "images": ["./map-images/museumvor1.png","./map-images/museumvor2.png"]
+        },
+        {
+            "name": "Westminster Hall",
+            "lat": 51.49982368294953,
+            "lng": -0.12539863586425784,
+            "description": "Beschreibung",
+            "images": ["./map-images/westminsterhall.png"]
+        }
+    ]
+}

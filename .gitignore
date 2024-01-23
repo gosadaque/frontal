@@ -1,0 +1,25 @@
+# Node.js
+node_modules/
+npm-debug.log
+package-lock.json
+.env
+
+# OracleDB Konfigurationsdatei
+dbconfig.js
+
+# Betriebssystemdateien
+.DS_Store
+Thumbs.db
+
+# Editor-Verzeichnisse und -Dateien
+.idea/
+*.sublime-workspace
+*.sublime-project
+.vscode/
+
+# Logs
+logs
+*.log
+
+# Temporäre Dateien
+tmp
