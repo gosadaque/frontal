@@ -2,7 +2,7 @@ const express = require('express');
 const oracledb = require('oracledb');
 
 const app = express();
-const port = 3000;
+const port = 80;
 
 // Middleware, um statische Dateien zu servieren (z.B. HTML, CSS, JS)
 app.use(express.static('public'));
@@ -40,3 +40,4 @@ app.get('/locations', async (req, res) => {
 app.listen(port, () => {
     console.log(`Server läuft auf http://localhost:${port}`);
 });
+
