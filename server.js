@@ -1,10 +1,6 @@
 const express = require('express');
 const oracledb = require('oracledb');
-const dbConfig = {
-  user: DB_USER,           // Zugriff auf die Umgebungsvariable DB_USER
-  password: DB_PASSWORD,   // Zugriff auf die Umgebungsvariable DB_PASSWORD
-  connectString: DB_CONNECT_STRING  // Zugriff auf die Umgebungsvariable DB_CONNECT_STRING
-};
+const dbConfig = dbConfig;
 
 const app = express();
 const port = 3000;
