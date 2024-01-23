@@ -1,6 +1,5 @@
 const express = require('express');
 const oracledb = require('oracledb');
-const dbConfig = dbConfig;
 
 const app = express();
 const port = 3000;
