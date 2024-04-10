@@ -1,9 +1,16 @@
 @media screen and (max-width: 600px) {
    .window {
       width: 100%;
-      /* Weitere Anpassungen für kleine Bildschirme */
    }
-   /* Weitere angepasste Stile für kleinere Bildschirme */
+   menu[role="tablist"] {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around; /* Zentriert die Tabs und verteilt sie gleichmäßig */
+    }
+    menu[role="tablist"] button[role="tab"] {
+        flex-basis: 48%; /* Passt die Breite der Tabs an, sodass zwei nebeneinander passen */
+        margin-bottom: 10px; /* Fügt einen unteren Abstand hinzu */
+    }
 }
 
 .center-container {
