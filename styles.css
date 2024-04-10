@@ -2,7 +2,9 @@
    .window {
       width: 100%;
    }
-   menu[role="tablist"] {
+   
+}
+menu[role="tablist"] {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around; /* Zentriert die Tabs und verteilt sie gleichmäßig */
@@ -11,8 +13,6 @@
         flex-basis: 48%; /* Passt die Breite der Tabs an, sodass zwei nebeneinander passen */
         margin-bottom: 10px; /* Fügt einen unteren Abstand hinzu */
     }
-}
-
 .center-container {
    display: flex;
    justify-content: center;
