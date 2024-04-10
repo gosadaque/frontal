@@ -12,3 +12,23 @@
    align-items: center;
    height: 100vh; /* Full height of the viewport */
 }
+
+svg {
+	padding-top: 5px;
+}
+
+p {
+	font-size: 15px;
+}
+
+.read-more {
+   font-size: 12px;
+}
+
+.container {
+    display: flex; /* Aktiviert Flexbox für diesen Container */
+}
+
+.box {
+    width: 50%; /* Setzt die Breite der Boxen */
+}
