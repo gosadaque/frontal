@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>WhatsApp Chat Analyse</title>
+
+</head>
+<body>
+    <h1>WhatsApp Chat Analyse</h1>
+    <input type="file" id="fileInput" accept=".txt">
+    <input type="text" id="specificWord" placeholder="Spezifisches Wort">
+    <input type="text" id="specificEmoji" placeholder="Spezifisches Emoji">
+    <br>
+    <input type="checkbox" id="analyzeDaysOfWeek" checked> Analyse nach Wochentag<br>
+    <input type="checkbox" id="analyzeHours" checked> Analyse nach Stunde<br>
+    <input type="checkbox" id="analyzeYears" checked> Analyse nach Jahr<br>
+    <input type="checkbox" id="analyzeMonths" checked> Analyse nach Monat<br>
+    <input type="checkbox" id="analyzeSpecificWord" checked> Analyse spezifisches Wort<br>
+    <input type="checkbox" id="analyzeSpecificEmoji" checked> Analyse spezifisches Emoji<br>
+    <input type="checkbox" id="analyzeEmojis" checked> Die 6 meistbenutzten Emojis<br>
+    <input type="checkbox" id="showFirstSixMessages" checked> Erste 6 Nachrichten anzeigen<br>
+    <button onclick="processFile()">Chat analysieren</button>
+    <div id="results"></div>
+
+    <script src="chat-analysis.js"></script>
+	<canvas id="chatAnalysisCanvas" width="800" height="600" style="border:1px solid #000;"></canvas>
+	
+</body>
+</html>
+Foto von <a href="https://unsplash.com/de/@marjan_blan?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Marjan Blan</a> auf <a href="https://unsplash.com/de/fotos/weisses-textil-auf-braunem-holztisch-5Ft4NWTmeJE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+  
