@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src="https://alwingulla.com/88/tag.min.js" data-zone="81605" async data-cfasync="false"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .image-container {
+            position: relative;
+            width: calc(33.333% - 10px);
+            max-width: 300px;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            cursor: pointer;
+        }
+        .ad-label {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            cursor: help;
+        }
+        .ad-label::after {
+            content: "i";
+        }
+        .ad-tooltip {
+            position: absolute;
+            top: 30px;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            white-space: nowrap;
+            display: none;
+        }
+        .ad-label:hover .ad-tooltip {
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .image-container {
+                width: calc(50% - 10px);
+            }
+        }
+        @media (max-width: 480px) {
+            .image-container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery" id="gallery"></div>
+
+    <script>
+        function createImageElement(image) {
+            const container = document.createElement('div');
+            container.className = 'image-container';
+
+            const img = document.createElement('img');
+            img.src = image.src;
+            img.alt = "Gallery image";
+            img.loading = "lazy";
+            img.addEventListener('click', () => {
+                window.open(image.link, '_blank');
+            });
+
+            container.appendChild(img);
+
+            if (image.isAd) {
+                const adLabel = document.createElement('div');
+                adLabel.className = 'ad-label';
+                const tooltip = document.createElement('span');
+                tooltip.className = 'ad-tooltip';
+                tooltip.textContent = 'Advertisement';
+                adLabel.appendChild(tooltip);
+                container.appendChild(adLabel);
+            }
+
+            return container;
+        }
+
+        function loadGallery(data) {
+            const gallery = document.getElementById('gallery');
+            data.images.forEach(image => {
+                gallery.appendChild(createImageElement(image));
+            });
+        }
+
+        // Loading the JSON file
+        fetch('gallery-data.json')
+            .then(response => response.json())
+            .then(data => loadGallery(data))
+            .catch(error => console.error('Error loading gallery data:', error));
+    </script>
+</body>
+</html>
