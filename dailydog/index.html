@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<script src="https://alwingulla.com/88/tag.min.js" data-zone="81605" async data-cfasync="false"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Gallery</title>
+    <title>Daily Dog Gallery</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 10px;
+            padding: 20px;
             box-sizing: border-box;
+        }
+        .gallery-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
         .gallery {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 20px;
             justify-content: center;
         }
         .image-container {
             position: relative;
-            width: calc(33.333% - 10px);
-            max-width: 300px;
+            width: calc((100% - 40px) / 3);
+            margin-bottom: 20px;
         }
         .image-container img {
             width: 100%;
@@ -33,8 +37,8 @@
             position: absolute;
             top: 10px;
             right: 10px;
-            width: 16px;
-            height: 16px;
+            width: 20px;
+            height: 20px;
             border-radius: 50%;
             background-color: rgba(0, 0, 0, 0.5);
             color: white;
@@ -64,10 +68,13 @@
         }
         @media (max-width: 768px) {
             .image-container {
-                width: calc(50% - 10px);
+                width: calc((100% - 20px) / 2);
             }
         }
         @media (max-width: 480px) {
+            .gallery-wrapper {
+                padding: 0;
+            }
             .image-container {
                 width: 100%;
             }
@@ -75,7 +82,9 @@
     </style>
 </head>
 <body>
-    <div class="gallery" id="gallery"></div>
+    <div class="gallery-wrapper">
+        <div class="gallery" id="gallery"></div>
+    </div>
 
     <script>
         function createImageElement(image) {
@@ -87,7 +96,9 @@
             img.alt = "Gallery image";
             img.loading = "lazy";
             img.addEventListener('click', () => {
-                window.open(image.link, '_blank');
+                if (confirm("You are about to leave this site. Do you want to continue?")) {
+                    window.open(image.link, '_blank');
+                }
             });
 
             container.appendChild(img);
@@ -107,8 +118,16 @@
 
         function loadGallery(data) {
             const gallery = document.getElementById('gallery');
-            data.images.forEach(image => {
-                gallery.appendChild(createImageElement(image));
+            data.images.forEach((image, index) => {
+                const imageElement = createImageElement(image);
+                gallery.appendChild(imageElement);
+                
+                // Start a new row after every third image
+                if ((index + 1) % 3 === 0) {
+                    const breakElement = document.createElement('div');
+                    breakElement.style.flexBasis = '100%';
+                    gallery.appendChild(breakElement);
+                }
             });
         }
 
