@@ -138,14 +138,28 @@
         let galleryData = { images: [] };
 
         function createGalleryData() {
-            for (let i = MAX_IMAGES; i >= 1; i--) {
-                galleryData.images.push({
-                    src: `./gallery/${i}.jpg`,
-                    link: "https://zaltaumi.net/4/7760149",
-                    isAd: true
-                });
-            }
-        }
+			const links = [
+				"https://zaltaumi.net/4/7760149",
+				"https://eedootefaug.net/4/7760149",
+				"https://psaudous.com/4/7769352",
+				"https://noakiglo.com/4/7769353",
+				"https://okautchalt.net/4/7760149", "https://woafoame.net/4/7769357", "https://beewoupaule.net/4/7769359","https://jeewhaphoa.net/4/7769362"
+				// Füge hier weitere Links hinzu
+			];
+
+			function getRandomLink() {
+				return links[Math.floor(Math.random() * links.length)];
+			}
+
+			for (let i = MAX_IMAGES; i >= 1; i--) {
+				galleryData.images.push({
+					src: `./gallery/${i}.jpg`,
+					link: getRandomLink(),
+					isAd: true
+				});
+			}
+		}
+
 
         function createImageElement(image) {
             const container = document.createElement('div');
@@ -162,6 +176,10 @@
             if (image.isAd) {
                 const adLabel = document.createElement('div');
                 adLabel.className = 'ad-label';
+				adLabel.addEventListener('click', (e) => {
+					e.stopPropagation();
+					window.open(image.link, '_blank');
+				});
                 const tooltip = document.createElement('span');
                 tooltip.className = 'ad-tooltip';
                 tooltip.textContent = 'Ad';
