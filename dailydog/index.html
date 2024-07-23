@@ -65,6 +65,41 @@
         .ad-label:hover .ad-tooltip {
             display: block;
         }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            object-fit: contain;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
         @media (max-width: 480px) {
             .gallery-wrapper {
                 padding: 5px;
@@ -92,7 +127,25 @@
         <div class="gallery" id="gallery"></div>
     </div>
 
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script src="config.js"></script>
     <script>
+        let galleryData = { images: [] };
+
+        function createGalleryData() {
+            for (let i = MAX_IMAGES; i >= 1; i--) {
+                galleryData.images.push({
+                    src: `./gallery/${i}.jpg`,
+                    link: "https://zaltaumi.net/4/7760149",
+                    isAd: true
+                });
+            }
+        }
+
         function createImageElement(image) {
             const container = document.createElement('div');
             container.className = 'image-container';
@@ -101,11 +154,7 @@
             img.src = image.src;
             img.alt = "Gallery image";
             img.loading = "lazy";
-            img.addEventListener('click', () => {
-                if (confirm("You are about to leave this site. Do you want to continue?")) {
-                    window.open(image.link, '_blank');
-                }
-            });
+            img.addEventListener('click', () => openModal(image));
 
             container.appendChild(img);
 
@@ -122,19 +171,39 @@
             return container;
         }
 
-        function loadGallery(data) {
+        function loadGallery() {
             const gallery = document.getElementById('gallery');
-            data.images.forEach((image) => {
+            galleryData.images.forEach((image) => {
                 const imageElement = createImageElement(image);
                 gallery.appendChild(imageElement);
             });
         }
 
-        // Loading the JSON file
-        fetch('gallery-data.json')
-            .then(response => response.json())
-            .then(data => loadGallery(data))
-            .catch(error => console.error('Error loading gallery data:', error));
+        function openModal(image) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.style.display = "block";
+            modalImg.src = image.src;
+            modalImg.onclick = function() {
+                window.open(image.link, '_blank');
+            };
+        }
+
+        const modal = document.getElementById('imageModal');
+        const span = document.getElementsByClassName("close")[0];
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        createGalleryData();
+        loadGallery();
     </script>
 </body>
 </html>

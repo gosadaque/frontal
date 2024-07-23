@@ -1,0 +1,1 @@
+const MAX_IMAGES = 182;
