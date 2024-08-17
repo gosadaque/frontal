@@ -1,4 +1,3 @@
-// Die Reihenfolge der Optionen
 const optionsLabels = [
     "Papierfahrschein",
     "Wiederaufladbare Karten",
@@ -9,10 +8,9 @@ const optionsLabels = [
     "City Cards (Touristenkarten)"
 ];
 
-// Funktion zum Generieren der HTML-Struktur
 function generateHTML(data) {
     const container = document.getElementById('cities-container');
-    container.innerHTML = ''; // Clear previous content
+    container.innerHTML = ''; // Vorherigen Inhalt löschen
 
     data.cities.forEach(city => {
         const cityDiv = document.createElement('div');
@@ -44,23 +42,32 @@ function generateHTML(data) {
     });
 }
 
-// Funktion zum Laden der JSON-Dateien
 function loadJSON(country) {
     const url = `./data/${country}.json`;
 
+    console.log(`Lade JSON-Datei von: ${url}`); // Debug-Ausgabe
+
     fetch(url)
-        .then(response => response.json())
-        .then(data => generateHTML(data))
-        .catch(error => console.error('Error loading JSON:', error));
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP-Fehler! Status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Daten geladen:', data); // Debug-Ausgabe
+            generateHTML(data);
+        })
+        .catch(error => {
+            console.error('Fehler beim Laden der JSON-Datei:', error);
+        });
 }
 
-// Event Listener für den Länderauswahl
 document.getElementById('country-select').addEventListener('change', function() {
     const selectedCountry = this.value;
     loadJSON(selectedCountry);
 });
 
-// Initiale Daten laden (z.B. Deutschland)
 window.onload = function() {
     loadJSON('deutschland');
 };
