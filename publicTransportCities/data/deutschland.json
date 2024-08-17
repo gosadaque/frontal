@@ -1,0 +1,16 @@
+{
+    "cities": [
+        {
+            "city": "Berlin",
+            "options": ["Ja", "Nein", "Nein", "Ja", "Ja (über App)", "Ja", "Berlin WelcomeCard"]
+        },
+        {
+            "city": "Hamburg",
+            "options": ["Ja", "Nein", "Nein", "Ja", "Ja (über App)", "Ja", "Hamburg Card"]
+        },
+        {
+            "city": "Dortmund",
+            "options": ["Ja", "Nein", "Nein", "Ja", "Ja (über App)", "Ja", "RuhrTopCard"]
+        }
+    ]
+}
