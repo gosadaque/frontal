@@ -1,0 +1,84 @@
+{
+    "cities": [
+        {
+            "city": "Rom",
+            "options": ["Ja", "Nein", "Ja", "Ja", "Ja", "Ja", "Roma Pass"]
+        },
+        {
+            "city": "Mailand",
+            "options": ["Ja", "Ja", "Ja", "Ja", "Ja", "Ja", "MilanoCard"]
+        },
+        {
+            "city": "Neapel",
+            "options": ["Ja", "Nein", "Ja", "Ja", "Ja", "Ja", "Campania Artecard"]
+        },
+        {
+            "city": "Turin",
+            "options": ["Ja", "Ja", "Ja", "Ja", "Ja", "Ja", "Torino+Piemonte Card"]
+        },
+        {
+            "city": "Palermo",
+            "options": ["Ja", "Nein", "Nein", "Ja", "Ja", "Ja", "Palermo Card"]
+        },
+        {
+            "city": "Genua",
+            "options": ["Ja", "Nein", "Nein", "Ja", "Ja", "Ja", "Genova City Pass"]
+        },
+        {
+            "city": "Bologna",
+            "options": ["Ja", "Nein", "Ja", "Ja", "Ja", "Ja", "Bologna Welcome Card"]
+        },
+        {
+            "city": "Florenz",
+            "options": ["Ja", "Nein", "Ja", "Ja", "Ja", "Ja", "Firenze Card"]
+        },
+        {
+            "city": "Bari",
+            "options": ["Ja", "Nein", "Nein", "Ja", "Ja", "Ja", "Bari Card"]
+        },
+        {
+            "city": "Catania",
+            "options": ["Ja", "Nein", "Nein", "Ja", "Ja", "Ja", "Catania Pass"]
+        },
+        {
+            "city": "Venedig",
+            "options": ["Ja", "Nein", "Ja", "Ja", "Ja", "Ja", "Venezia Unica City Pass"]
+        },
+        {
+            "city": "Verona",
+            "options": ["Ja", "Nein", "Nein", "Ja", "Ja", "Ja", "Verona Card"]
+        },
+        {
+            "city": "Messina",
+            "options": ["Ja", "Nein", "Nein", "Ja", "Ja", "Ja", "Messina Pass"]
+        },
+        {
+            "city": "Padua",
+            "options": ["Ja", "Nein", "Nein", "Ja", "Ja", "Ja", "Padova Card"]
+        },
+        {
+            "city": "Triest",
+            "options": ["Ja", "Nein", "Nein", "Ja", "Ja", "Ja", "Trieste Card"]
+        },
+        {
+            "city": "Tarent",
+            "options": ["Ja", "Nein", "Nein", "Ja", "Ja", "Ja", "Taranto Card"]
+        },
+        {
+            "city": "Brescia",
+            "options": ["Ja", "Nein", "Nein", "Ja", "Ja", "Ja", "Brescia Card"]
+        },
+        {
+            "city": "Prato",
+            "options": ["Ja", "Nein", "Nein", "Ja", "Ja", "Ja", "Prato Card"]
+        },
+        {
+            "city": "Parma",
+            "options": ["Ja", "Nein", "Nein", "Ja", "Ja", "Ja", "Parma Card"]
+        },
+        {
+            "city": "Modena",
+            "options": ["Ja", "Nein", "Nein", "Ja", "Ja", "Ja", "Modena Card"]
+        }
+    ]
+}
