@@ -1,0 +1,84 @@
+{
+    "cities": [
+        {
+            "city": "Madrid",
+            "options": ["Ja", "Ja", "Ja", "Ja", "Ja", "Ja", "Madrid Card"]
+        },
+        {
+            "city": "Barcelona",
+            "options": ["Ja", "Ja", "Ja", "Ja", "Ja", "Ja", "Barcelona Card"]
+        },
+        {
+            "city": "Valencia",
+            "options": ["Ja", "Ja", "Nein", "Ja", "Ja", "Ja", "Valencia Tourist Card"]
+        },
+        {
+            "city": "Sevilla",
+            "options": ["Ja", "Ja", "Nein", "Ja", "Ja", "Ja", "Sevilla Card"]
+        },
+        {
+            "city": "Zaragoza",
+            "options": ["Ja", "Ja", "Nein", "Ja", "Nein", "Ja", "Zaragoza Card"]
+        },
+        {
+            "city": "Málaga",
+            "options": ["Ja", "Ja", "Nein", "Ja", "Ja", "Ja", "Málaga Pass"]
+        },
+        {
+            "city": "Murcia",
+            "options": ["Ja", "Ja", "Nein", "Ja", "Nein", "Ja", "Murcia Card"]
+        },
+        {
+            "city": "Palma",
+            "options": ["Ja", "Ja", "Nein", "Ja", "Ja", "Ja", "Palma Pass"]
+        },
+        {
+            "city": "Las Palmas de Gran Canaria",
+            "options": ["Ja", "Ja", "Nein", "Ja", "Ja", "Ja", "Las Palmas Card"]
+        },
+        {
+            "city": "Bilbao",
+            "options": ["Ja", "Ja", "Ja", "Ja", "Ja", "Ja", "Bilbao Card"]
+        },
+        {
+            "city": "Alicante",
+            "options": ["Ja", "Ja", "Nein", "Ja", "Ja", "Ja", "Alicante Card"]
+        },
+        {
+            "city": "Córdoba",
+            "options": ["Ja", "Ja", "Nein", "Ja", "Nein", "Ja", "Córdoba Card"]
+        },
+        {
+            "city": "Valladolid",
+            "options": ["Ja", "Ja", "Nein", "Ja", "Nein", "Ja", "Valladolid Card"]
+        },
+        {
+            "city": "Vigo",
+            "options": ["Ja", "Ja", "Nein", "Ja", "Nein", "Ja", "Vigo Card"]
+        },
+        {
+            "city": "Gijón",
+            "options": ["Ja", "Ja", "Nein", "Ja", "Nein", "Ja", "Gijón Card"]
+        },
+        {
+            "city": "Eixample (Barcelona)",
+            "options": ["Ja", "Ja", "Ja", "Ja", "Ja", "Ja", "Barcelona Card"]
+        },
+        {
+            "city": "L'Hospitalet de Llobregat",
+            "options": ["Ja", "Ja", "Ja", "Ja", "Ja", "Ja", "Barcelona Card"]
+        },
+        {
+            "city": "A Coruña",
+            "options": ["Ja", "Ja", "Nein", "Ja", "Nein", "Ja", "A Coruña Card"]
+        },
+        {
+            "city": "Vitoria-Gasteiz",
+            "options": ["Ja", "Ja", "Nein", "Ja", "Ja", "Ja", "Vitoria-Gasteiz Card"]
+        },
+        {
+            "city": "Granada",
+            "options": ["Ja", "Ja", "Nein", "Ja", "Ja", "Ja", "Granada Card"]
+        }
+    ]
+}

@@ -1,0 +1,84 @@
+{
+    "cities": [
+        {
+            "city": "Berlin",
+            "options": ["Ja", "Nein", "Nein", "Ja", "Ja (über App)", "Ja", "Berlin WelcomeCard"]
+        },
+        {
+            "city": "Hamburg",
+            "options": ["Ja", "Nein", "Nein", "Ja", "Ja (über App)", "Ja", "Hamburg Card"]
+        },
+        {
+            "city": "München",
+            "options": ["Ja", "Ja", "Ja", "Ja", "Ja (über App)", "Ja", "München CityTourCard"]
+        },
+        {
+            "city": "Köln",
+            "options": ["Ja", "Ja", "Ja", "Ja", "Ja (über App)", "Ja", "KölnCard"]
+        },
+        {
+            "city": "Frankfurt am Main",
+            "options": ["Ja", "Nein", "Ja", "Ja", "Ja (über App)", "Ja", "Frankfurt Card"]
+        },
+        {
+            "city": "Stuttgart",
+            "options": ["Ja", "Ja", "Ja", "Ja", "Ja (über App)", "Ja", "Stuttgart CityTourCard"]
+        },
+        {
+            "city": "Düsseldorf",
+            "options": ["Ja", "Nein", "Ja", "Ja", "Ja (über App)", "Ja", "DüsseldorfCard"]
+        },
+        {
+            "city": "Dortmund",
+            "options": ["Ja", "Nein", "Nein", "Ja", "Ja (über App)", "Ja", "RuhrTopCard"]
+        },
+        {
+            "city": "Essen",
+            "options": ["Ja", "Nein", "Nein", "Ja", "Ja (über App)", "Ja", "RuhrTopCard"]
+        },
+        {
+            "city": "Leipzig",
+            "options": ["Ja", "Ja", "Nein", "Ja", "Ja (über App)", "Ja", "Leipzig Card"]
+        },
+        {
+            "city": "Bremen",
+            "options": ["Ja", "Nein", "Nein", "Ja", "Ja (über App)", "Ja", "Bremen ErlebnisCard"]
+        },
+        {
+            "city": "Dresden",
+            "options": ["Ja", "Nein", "Nein", "Ja", "Ja (über App)", "Ja", "Dresden City Card"]
+        },
+        {
+            "city": "Hannover",
+            "options": ["Ja", "Nein", "Nein", "Ja", "Ja (über App)", "Ja", "HannoverCard"]
+        },
+        {
+            "city": "Nürnberg",
+            "options": ["Ja", "Ja", "Nein", "Ja", "Ja (über App)", "Ja", "Nürnberg Card"]
+        },
+        {
+            "city": "Duisburg",
+            "options": ["Ja", "Nein", "Nein", "Ja", "Ja (über App)", "Ja", "RuhrTopCard"]
+        },
+        {
+            "city": "Bochum",
+            "options": ["Ja", "Nein", "Nein", "Ja", "Ja (über App)", "Ja", "RuhrTopCard"]
+        },
+        {
+            "city": "Wuppertal",
+            "options": ["Ja", "Nein", "Nein", "Ja", "Ja (über App)", "Ja", "RuhrTopCard"]
+        },
+        {
+            "city": "Bielefeld",
+            "options": ["Ja", "Nein", "Nein", "Ja", "Ja (über App)", "Ja", "Nein"]
+        },
+        {
+            "city": "Bonn",
+            "options": ["Ja", "Nein", "Ja", "Ja", "Ja (über App)", "Ja", "Bonn Regio WelcomeCard"]
+        },
+        {
+            "city": "Münster",
+            "options": ["Ja", "Nein", "Nein", "Ja", "Ja (über App)", "Ja", "MünsterCard"]
+        }
+    ]
+}
