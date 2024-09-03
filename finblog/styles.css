@@ -1,3 +1,4 @@
+/* Basis-Styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -8,20 +9,20 @@ body {
 }
 
 .container {
-    width: 60%;
+    width: 90%;
     margin: 0 auto;
 }
 
 header {
     background-color: #333;
     color: #fff;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 header h1 {
     text-align: center;
     margin: 0;
-    font-size: 2.5em;
+    font-size: 2em;
 }
 
 nav ul {
@@ -31,26 +32,28 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    display: block;
+    margin: 10px 0;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    display: block;
+    padding: 5px;
 }
 
 main {
     background: #fff;
-    padding: 20px;
-    margin-top: 20px;
+    padding: 15px;
+    margin-top: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 main img {
     width: 100%;
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 footer {
@@ -58,19 +61,21 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    margin-top: 20px;
+    margin-top: 15px;
 }
+
 #post-navigation {
     display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+    flex-direction: column;
+    margin-top: 15px;
 }
 
 #post-navigation button {
     background-color: #333;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 10px;
+    margin: 5px 0;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -83,14 +88,13 @@ footer {
 #post-navigation button:hover:not(:disabled) {
     background-color: #555;
 }
+
 #header-date {
-    position: absolute;
-    bottom: 32px;
-    right: 10px;
-    background-color: rgba(0, 0, 0, 0.5); 
+    position: static;
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
 }
 
 .header-image-container {
@@ -109,8 +113,51 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2.5em;
+    font-size: 1.5em;
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px 20px;
-    border-radius: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Media Queries für größere Bildschirme */
+@media screen and (min-width: 768px) {
+    .container {
+        width: 80%;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    nav ul li {
+        display: inline;
+        margin: 0 15px;
+    }
+
+    #post-navigation {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #post-navigation button {
+        margin: 0;
+    }
+
+    .header-image-container h2 {
+        font-size: 2em;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        width: 60%;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .header-image-container h2 {
+        font-size: 2.5em;
+    }
 }
