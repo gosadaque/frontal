@@ -8,7 +8,7 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
 }
 
@@ -83,6 +83,16 @@ footer {
 #post-navigation button:hover:not(:disabled) {
     background-color: #555;
 }
+#header-date {
+    position: absolute;
+    bottom: 32px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
 .header-image-container {
     position: relative;
     text-align: center;
@@ -100,7 +110,7 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 2.5em;
-    background-color: rgba(0, 0, 0, 0.5); /* Halbtransparenter Hintergrund für bessere Lesbarkeit */
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 10px 20px;
     border-radius: 10px;
 }

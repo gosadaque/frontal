@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('header-image').src = post.headerImage;
             document.getElementById('header-image').alt = post.title;
             document.getElementById('post-title').textContent = post.title;
-            document.getElementById('post-date').textContent = post.date;
+            document.getElementById('header-date').textContent = post.date;
             document.getElementById('post-content').innerHTML = post.content;
 
             // Navigation Buttons
