@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
             postId = Math.max(0, Math.min(postId, data.length - 1));
 
             const post = data[postId];
-            document.getElementById('blog-title').textContent = post.title + ' - Finanzen Blog';
             document.getElementById('header-image').src = post.headerImage;
             document.getElementById('header-image').alt = post.title;
             document.getElementById('post-title').textContent = post.title;
