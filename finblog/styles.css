@@ -83,3 +83,24 @@ footer {
 #post-navigation button:hover:not(:disabled) {
     background-color: #555;
 }
+.header-image-container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.header-image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.header-image-container h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5em;
+    background-color: rgba(0, 0, 0, 0.5); /* Halbtransparenter Hintergrund für bessere Lesbarkeit */
+    padding: 10px 20px;
+    border-radius: 10px;
+}
